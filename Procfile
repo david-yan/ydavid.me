@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: sleep 10000000000
