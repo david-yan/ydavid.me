@@ -6,6 +6,10 @@ from app import app
 def index():
     return render_template('index.html')
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
 @app.route('/assets/<path:path>')
 def asset(path):
     return send_from_directory('assets', path)

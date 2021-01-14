@@ -1,45 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>yDavid - Personal Website</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "base.html" %}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+{% block title %}Landing{% endblock %}
 
+{% block body_class %}landing{% endblock %}
 
-  <!-- Main CSS File -->
-  <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-
-
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-
-  <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
-  </style>
-</head>
-<body>
-
+{% block body %}
 <!-- ======= Header ======= -->
 <header id="header">
   <div class="d-flex flex-column">
@@ -80,8 +45,9 @@
   <section id="about" class="about">
     <div class="container">
       <div class="section-title">
-        <h2>About</h2>
+        <h2>What's My Story?</h2>
         <p>
+          <!-- TODO: Replace with back story of my past year, and why I am creating this website. -->
           Hello there! I created this website in my spare time as a landing page for myself, friends, families, and anyone else who might be interested.
           My goal for this site is to have a place where I can share about my life, thoughts, aspirations, etc. on a platform that is not social media.
           This is also an opportunity for me to learn about front end website development, as my forte and preference has been in anything but.
@@ -105,23 +71,6 @@
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content">
           <h3>In Essence</h3>
-          <p class="font-italic">
-            A few details for those that are interested:
-          </p>
-          <div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 10 September 1996</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Location:</strong> Bay Area, California</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 24</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> david.yan@berkeley.edu</li>
-              </ul>
-            </div>
-          </div>
           <p>
             I oftentimes struggle with trying to describe myself. I find that most people are looking for short and concise descriptions, however I find that that causes you to fit yourself into a
             group with certain defining qualities as a way to succinctly convey a general sense of who you are. I find that these descriptions are often bland, uninteresting, and ineffective at portraying
@@ -242,7 +191,7 @@
     <div class="container">
       <div class="section-title">
         <h2>Blog</h2>
-        <p>A work in progress! Having a platform to share my thoughts and ideas is something I've always wanted, but never quite got around to doing. I will hopefully have this part up and running soon.</p>
+        <p>A <a href="/blog">work in progress</a>! Having a platform to share my thoughts and ideas is something I've always wanted, but never quite got around to doing. I will hopefully have this part up and running soon.</p>
       </div>
     </div>
   </section><!-- End Blog Section -->
@@ -258,6 +207,4 @@
   </section><!-- End Contact Section -->
 
 </main>
-
-</body>
-</html>
+{% endblock %}
