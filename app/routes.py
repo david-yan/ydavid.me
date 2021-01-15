@@ -10,6 +10,10 @@ def index():
 def blog():
     return render_template('blog.html')
 
+@app.route('/post')
+def post():
+    return render_template('post.html')
+
 @app.route('/assets/<path:path>')
 def asset(path):
     return send_from_directory('assets', path)

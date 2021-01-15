@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block body_class %}blog{% endblock %}
+
+{% block body %}
+
+<!-- ======= Blog Header ======= -->
+<div id="blog-header">
+  <div class="w-container d-flex align-items-center">
+    <a href="/blog" class="site-name mr-auto"><h1>yDavid - Blog</h1></a>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="/blog"><span>Home</span></a></li>
+        <li><a href="/"><span>Landing</span></a></li>
+        <li><a href="/contact"><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div id="blog">
+  <div class="w-container d-flex">
+    <div class="box sidebar d-flex align-items-center flex-column">
+      <div class="profile-frame rounded-circle">
+        <img src="assets/img/grad_profile.jpg" alt="">
+      </div>
+      <p>Here is some filler text that I will replace later once I have finished with creating the layout for this webpage.</p>
+      <hr>
+      <p>Here is some more filler text that will be replaced. The side bar is looking pretty good thus far!</p>
+      <hr>
+      <p>DESIGN INSPIRED FROM <a href="https://webflow.com/templates/html/denali-blog-website-template">WEBFLOW</a></p>
+    </div>
+
+    <div class="d-flex flex-column">
+      <div class="article box d-flex flex-column">
+        <div class="frame">
+          <img src="/assets/img/2015_tahoe_sunset.jpg" alt="">
+        </div>
+        <div class="text flex-grow-1">
+            <h1>Sample Article</h1>
+            <p class="subtext">JANUARY 13, 2021</p>
+            <h2>Starter Files</h2>
+            <p>Download <a href="https://github.com/david-yan/CS110_starter_code/blob/master/hw01.zip?raw=true">hw01.zip</a>. Inside the archive,
+            you will find starter files for the questions in this homework, along with a copy of the <a href="https://cs61a.org/lab/lab01/ok">Ok</a>
+            autograder.</p>
+            <h2>Running Tests</h2>
+            <p>To test that your code is working correctly, run <code>python3 ok</code>. This will automatically run the test suite against your code.
+            Please make sure to check your output to ensure that all of the tests passed. If you have any problems running the tester,
+            please make a post on Piazza.</p>
+            <h2>Using OK</h2>
+            <p>For ease of testing for both you and the grader, we will now be using a program called Ok for testing homeworks, labs, and
+            projects. A few important things to note about using Ok are the following:</p>
+            <p>To run all of the tests using Ok, run the following:
+            <code>python3 ok</code></p>
+            <p>To run a test for a specified function, run the following command:
+            <code>python3 ok -q &lt;specified function&gt;</code></p>
+            <p>By default, only tests that did not pass will show up. You can use the <code>-v</code> option to show all the tests, including tests
+            you have passed.
+            <code>python3 ok -v</code></p>
+            <p>For more Ok commands, visit <a href="https://cal-cs-61a-staff.github.io/ok-help/">here</a>.</p>
+            <h2>Submitting</h2>
+            <p>To submit, please go to <a href="https://okpy.org/usf/cs110/sp20/hw01/">okpy</a> (you will need to log in with your usfca.edu email),
+            and click <code>Create a new submission</code>. The instructions will direct you on how you should submit the assignment. You can create
+            multiple submissions, and for grading, you most recent submission will be used.</p>
+            <p>The submissions will always be open up to 3 days after the assigned due date to account for slip days. If you want to create
+            a submission after the deadline to get comments, but do not want to use slip days, please indicate clearly in your submission.</p>
+            <h2>Questions</h2>
+            <h3>Q1: Review Week 1</h3>
+            <p>Let\'s begin by applying all of the concepts that we learned in the first week of class. Ask the user for an integer using
+            the <code>input</code> command, and return True if the integer is positive, False otherwise. For this question, we will consider zero
+            to be a positive integer.
+            <code>``
+            def positive():
+                """Ask if for an integer via the</code>input` command.
+                Return True if the integer is positive, False otherwise.</p>
+            <pre><code>Example test cases:
+            % python hw01_review.py
+            Enter integer: 1
+            True
+            % python hw01_review.py
+            Enter integer: -1
+            False
+            % python hw01_review.py
+            Enter integer: 0
+            True
+            """
+            "*** YOUR CODE HERE ***"
+            </code></pre>
+            <p><code>Unfortunately there are no automatic tests for this question, so please test manually with:</code>
+            python3 hw01_review.py
+            ```</p>
+            <h3>Q2: Review: What Would Python Display?</h3>
+            <p>Review and test your knowledge of <code>input</code> and data types by completing the following questions:
+            <code>python3 -q review -u</code></p>
+            <h3>Coding Practice</h3>
+            <h3>Q3: Both Positives</h3>
+            <p>Using if statements, fill in the following conditions to display True if both <code>a</code> and <code>b</code> are positive (zero is positve).
+            ```
+            def both_positives(a, b):
+                """Returns True if both a and b are positive.</p>
+            <pre><code>&gt;&gt;&gt; both_positives(-1, 1)
+            False
+            &gt;&gt;&gt; both_positives(1, 1)
+            True
+            &gt;&gt;&gt; both_positives(0, 1)
+            True
+            """
+            if ____:
+                return True
+            else:
+                return False
+            </code></pre>
+            <p><code>Using Ok, test your code with:</code>
+            python3 ok -q both_positives
+            ```</p>
+            <h3>Q4: Get Item</h3>
+            <p>Let\'s make sure we understand lists and indexes. Given a list, <code>lst</code>, and a number, <code>n</code>, return the <code>n</code>th element of <code>lst</code>.
+            Please look at the tests if you are confused.
+            ```
+            def get_item(lst, n):
+                """ Returns the nth element of the lst, or None if the element doesn\'t exist.</p>
+            <pre><code>&gt;&gt;&gt; get_item([17, 73, 35, 97], 1)
+            17
+            &gt;&gt;&gt; get_item(\'uniqlo\', 4)
+            \'q\'
+            &gt;&gt;&gt; get_item([1, 2, 3, 4], 5)
+            &gt;&gt;&gt; get_item([1, 2, 3, 4], -1)
+            """
+            if ___ or ___: # &lt;--- Change here.
+                return None
+            output = ___ # &lt;--- Change here.
+            return output
+            </code></pre>
+            <p><code>Using Ok, test your code with:</code>
+            python3 ok -q get_item
+            ```</p>
+            <h3>Q5: If Function</h3>
+            <p>Let\'s replicate an if statement with a little more functionality. 
+            ```
+            def if_function(condition, true_result, false_result):
+                """Return true_result if condition is a true value, and false_result otherwise.</p>
+            <pre><code>&gt;&gt;&gt; if_function(True, 2, 3)
+            2
+            &gt;&gt;&gt; if_function(False, 2, 3)
+            3
+            &gt;&gt;&gt; if_function(3==2, 3+2, 3-2)
+            1
+            &gt;&gt;&gt; if_function(3&gt;2, 3+2, 3-2)
+            5
+            """
+            "*** YOUR CODE HERE ***"
+            </code></pre>
+            <p><code>Using Ok, test your code with:</code>
+            python3 ok -q if_function
+            ```</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

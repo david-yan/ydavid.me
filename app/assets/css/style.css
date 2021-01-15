@@ -121,6 +121,10 @@ hr {
   color: #e8e6e3;
 }
 
+#blog pre {
+  color: rgb(209, 205, 199);
+}
+
 /*--------------------------------------------------------------
 # Blog Header
 --------------------------------------------------------------*/
@@ -253,6 +257,29 @@ hr {
   position: absolute;
   width: 240px;
   height: 240px;
+}
+
+/*--------------------------------------------------------------
+# Blog Posts
+--------------------------------------------------------------*/
+#blog .article {
+  height: auto;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 100%;
+}
+
+#blog .article .frame {
+  position: relative;
+  height: 240px!important;
+  width: 100%;
+  overflow: hidden;
+}
+
+#blog .article img {
+  position: absolute;
+  width: 100%;
+  top: -150px;
 }
 
 /*--------------------------------------------------------------
