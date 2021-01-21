@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Login{% endblock %}
+
+{% block body_class %}landing{% endblock %}
+
+{% block body %}
+<h1>Admin Login</h1>
+<form action="/admin_login" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.password.label }}<br>
+        {{ form.password(size=16) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

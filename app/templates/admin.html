@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Page{% endblock %}
+
+{% block body_class %}landing{% endblock %}
+
+{% block body %}
+<h1>Admin</h1>
+<form action="/post" method="post" novalidate>
+    {{ post_form.hidden_tag() }}
+    <p>
+        {{ post_form.file.label }}<br>
+        {{ post_form.file(size=16) }}
+    </p>
+    <p>
+        {{ post_form.picture.label }}<br>
+        {{ post_form.picture(size=16) }}
+    </p>
+    <p>{{ post_form.submit() }}</p>
+</form>
+
+<form action="/admin_logout" method="post" novalidate>
+    <input type="submit" value="Logout">
+</form>
+{% endblock %}
